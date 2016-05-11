@@ -1,0 +1,19 @@
+{
+  "name": "js-basic",
+  "version": "0.0.1",
+  "description": "js-basic은 자바스크립트 이용시 간과하고 넘어가는 것들을 정리한 것임.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "javascript",
+    "es5",
+    "es6",
+    "es2015",
+    "testcase",
+    "prototype"
+  ],
+  "author": "skkim",
+  "license": "ISC"
+}
