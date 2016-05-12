@@ -19,14 +19,16 @@ Shape.prototype.move = function(x, y) {
 	console.info('Shape move x: ' + x + ' y: ' + y);
 };
 
-function Rect() {
+function Rect(width, height) {
 	Shape.call(this); // call superclass
+	this.width = width;
+	this.height = height;
 }
 
 Rect.prototype = Object.create(Shape.prototype); // 여기에서 Object.create의 역할은 무엇인가? 
 Rect.prototype.constructor = Rect;
 
-var shape = new Shape();
+
 var rect = new Rect();
 console.log('Is rect an instance of Rectangle?', rect instanceof Rect);
 console.log('Is rect an instance of Shape?', rect instanceof Shape);
