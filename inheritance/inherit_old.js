@@ -17,11 +17,11 @@ function Rect() {
 Rect.prototype = new Shape();
 Rect.prototype.constructor = Rect;
 
-Rect.prototype.get = function() {
+Rect.prototype.getPos = function() {
 	return {
 		x: this.x,
 		y: this.y
-	}
+	};
 }; 
 
 var rect = new Rect();
