@@ -1,86 +1,52 @@
-// 아주 복잡하게 생긴 오브젝트였으면 한다. 
-
-class A {
-	constructor() {
-		this.x = 'x';
-		this.y = 'y';
-		this.z = 'z';
-		this.width = 100;
-		this.height = 300;
-	}
-
-	func1() {
-		return 'method1';
-	}
-
-	func2() {
-		return 'method2';
-	}
-
-	func3() {
-		return 'method3';
+export const obj1 = {
+	name: 'obj1',	
+	x: 1,
+	y: 2,
+	attr: 'what?',
+	attr1: 'attr2',
+	func1: function() {
+		return 'what is func1?'
+	},
+	func2: function() {
+		return 'what is func2?'
 	}
 };
 
-
-class B extends A {
-	constructor() {
-		super();
-		this.xs = 'xs';
-		this.ys = 'ys';
-		this.zs = 'zs';
+export const obj2 = {
+	attr1: 'obj2 attr1',
+	func3: function() {
+		return 'func3';
+	},
+	func4: function() {
+		return 'func4';
 	}
+};
 
-	func4() {
-		return 'method4';
+export const obj3 = function() {
+	return {
+		func5: function() {
+			return 'func5';
+		},
+		func6: function() {
+			return 'func6';
+		}
 	}
+};
 
-	func5() {
-		return 'method5';
+export const obj4 = {
+	attr3: 'what attr3',
+	attr4: 'what attr4',
+	func5: function() {
+		return this.name;
+	},
+	func6: function() {
+		this.attr3 = 'hello world';
+		return this.attr3;
+	},
+	func7: function() {
+		return 'func7';
+	},
+	init: function() {
+		return this.func5() + '  ' + this.func6() + '   ' + this.func7();
 	}
-
-	func6() {
-		return 'method6';
-	}
-}
-
-export default class C extends B {
-	constructor() {
-		super();
-		this.a = 'a';
-		this.b = 'b';
-		this.c = 'c';
-		this.init();
-	}
-
-	init() {
-		console.log('func4 is', this.func4());
-		console.log('func5 is', this.func5());
-		console.log('func6 is', this.func6());
-	}
-
-	func7() {
-		return 'method7';
-	}
-
-	func8() {
-		return 'method8';
-	}
-
-	func9() {
-		return 'method9';
-	}
-
-	static of() {
-		return new C();
-	}
-}
-
-var c = C.of();
-console.log('c', c);
-var desc = Object.getOwnPropertyDescriptor(c, 'func9');
-console.log('desc func9: ', desc);
-for (var i of c) {
-	console.log('property: ', i);
-}
-
+};
