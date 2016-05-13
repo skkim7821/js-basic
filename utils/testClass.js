@@ -63,7 +63,12 @@ export class Cklass extends Bclass {
 		return 'method7';
 	}
 
+	func71() {
+		console.log('Cklass func71');
+	}
+
 	func8() {
+		console.log('Cklass func8');
 		return 'method8';
 	}
 
@@ -91,10 +96,12 @@ export class Dclass {
 	}
 
 	method1() {
+		console.log('Dclass method1');
 		return 'method7';
 	}
 
 	method2() {
+		console.log('Dclass method2');
 		return 'method8';
 	}
 
@@ -112,6 +119,7 @@ export class Eclass {
 	}
 
 	method4() {
+		console.log('Eclass method4');
 		return 'method7';
 	}
 

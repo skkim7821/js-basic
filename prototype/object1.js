@@ -31,9 +31,7 @@ Rect.prototype.getArea = function() {
 
 // Cuboid --> Rect --> Shape --> Object --> null : instance of Cuboid
 function Cuboid(width, height, depth) {
-	Rect.call(this);
-	this.width = width;
-	this.height = height;
+	Rect.call(this, width, height);
 	this.depth = depth;
 }
 

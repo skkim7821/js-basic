@@ -52,10 +52,8 @@ class Rect extends Shape {
 
 class Cuboid extends Rect {
 	constructor(width, height, depth) {
-		super();
+		super(width, height);
 		this.z = 0;
-		this.width = width;
-		this.height = height;
 		this.depth = depth;
 	}
 
@@ -72,7 +70,7 @@ class Cuboid extends Rect {
 	};
 
 	set dimensions(o) {
-		super.dimensions(o.width, o.height);
+		super.dimensions(o);
 		this.depth = o.depth;
 		console.info(`dimensions is modified. width: ${this.width} height: ${this.height} depth: ${this.depth}`);	
 	};

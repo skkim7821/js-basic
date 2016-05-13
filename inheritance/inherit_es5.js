@@ -31,6 +31,21 @@ Object.defineProperty(Rect.prototype, 'constructor', {
 	enumerable: false
 });
 
+function Cuboid(width, height, depth) {
+	Rect.call(this, width, height);
+	this.depth = depth;
+}
+
+Cuboid.prototype = Object.create(Rect.prototype);
+Cuboid.prototype.constructor = Cuboid;
+Object.defineProperty(Cuboid.prototype, 'constructor', { 
+	enumerable: false
+});
+
+Cuboid.prototype.getVolume = function() {
+	return this.width * this.height * this.depth;
+};
+
 
 var rect = new Rect(200, 300);
 console.log('Is rect an instance of Rectangle?', rect instanceof Rect);
