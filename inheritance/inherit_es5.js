@@ -27,11 +27,18 @@ function Rect(width, height) {
 
 Rect.prototype = Object.create(Shape.prototype); // 여기에서 Object.create의 역할은 무엇인가? 
 Rect.prototype.constructor = Rect;
+Object.defineProperty(Rect.prototype, 'constructor', { 
+	enumerable: false
+});
 
 
-var rect = new Rect();
+var rect = new Rect(200, 300);
 console.log('Is rect an instance of Rectangle?', rect instanceof Rect);
 console.log('Is rect an instance of Shape?', rect instanceof Shape);
 
 console.log(rect);
 rect.move(10, 10);
+
+for (var i in rect) {
+	console.log('property: ', i);
+}

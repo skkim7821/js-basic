@@ -49,7 +49,7 @@ Cuboid.prototype.getVolume = function() {
 
 Cuboid.prototype.showMsg = function() {
 	console.log('what the hell');
-}
+};
 
 var shape = new Shape();
 var rect = new Rect(100, 200);
