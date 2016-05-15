@@ -17,7 +17,7 @@ function Food(name, price) {
 Food.prototype = new Product();
 
 function Toy(name, price) {
-  Product.call(this, name, price);
+  Product.call(this, name, price); // 이게 핵심임
   this.category = 'toy';
 }
 Toy.prototype = new Product();

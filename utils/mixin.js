@@ -1,8 +1,8 @@
-import { obj1, obj2, obj3, obj4 } from './testObj';
+// import { obj1, obj2, obj3, obj4 } from './testObj';
 
-var objs = mixin(obj1, obj2, obj4);
-console.log('objs', objs);
-console.log(objs.init());
+// var objs = mixin(obj1, obj2, obj4);
+// console.log('objs', objs);
+// console.log(objs.init());
 
 // hasOwnProperty만 할 수 있도록 해야 하는가? 
 
@@ -22,7 +22,9 @@ export default function mixin() {
 	var o = {};
 	xs.forEach(function(x) {
 		for(var p in x) {
-			o[p] = x[p];
+			if ( p !== 'constructor' && x.hasOwnProperty(p) ) {
+				o[p] = x[p];	
+			}
 		}
 	});
 

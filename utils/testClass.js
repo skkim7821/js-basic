@@ -51,6 +51,22 @@ export class Cklass extends Bclass {
 		this.b = 'b';
 		this.c = 'c';
 		this.init();
+		this.state = {
+			attr1: 'attr1',
+			attr2: 'attr2',
+			html: {
+				head: {
+					meta: 'this is meta',
+					script: 'script',
+					style: 'style'
+				},
+				body: {
+					header: 'this is header',
+					contents: 'contents',
+					footer: 'this is footer'
+				}
+			}
+		}
 	}
 
 	init() {

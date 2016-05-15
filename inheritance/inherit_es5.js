@@ -1,3 +1,6 @@
+// 프로퍼티는 프로토타입에 절대 담지 않는다. 
+
+
 function Shape() {
 	this.x = 0;
 	this.y = 0;
